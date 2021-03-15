@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+<script>
+  window.TrackJS && TrackJS.install({ 
+    token: "285207bd59914cee93d3186b13626cc2"
+    // for more configuration options, see https://docs.trackjs.com
+  });
+</script>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>110 Lab 5</title>
+  <link rel="stylesheet" href="assets/styles/main.css">
+</head>
+
+<body>
+                        
+  <div id="container">
+    <header>
+      <h1>110 Lab - Party Horn</h1>
+    </header>
+
+    <main>
+      <img id="sound-image" src="./assets/media/images/air-horn.svg" alt="Air Horn">
+
+      <form id="party-horn-form">
+        <fieldset id="volume-controls">
+          <div id="volume-grid-container">
+            <label for="volume-number" id="volume-text">Volume</label>
+            <img id="volume-image" src="./assets/media/icons/volume-level-3.svg"
+              alt="Max Volume">
+            <input id="volume-number" name="volume-number" type="number" min="-100" max="200"
+              value="100">
+            <input id="volume-slider" name="volume-slider" type="range" min="-100" max="200"
+              value="100">
+          </div>
+        </fieldset>
+
+        <fieldset id="audio-selection">
+          <div id="radio-air-horn-container">
+            <input type="radio" id="radio-air-horn" name="radio-sound" checked>
+            <label for="radio-air-horn">Air Horn</label>
+          </div>
+          <div id="radio-car-horn-container">
+            <input type="radio" id="radio-car-horn" name="radio-sound">
+            <label for="radio-car-horn">Car Horn</label>
+          </div>
+          <div id="radio-party-horn-container">
+            <input type="radio" id="radio-party-horn" name="radio-sound">
+            <label for="radio-party-horn">Party Horn</label>
+          </div>
+        </fieldset>
+
+        <audio id="horn-sound" src="./assets/media/audio/air-horn.mp3"></audio>
+
+        <div id="honk-btn-container">
+          <button id="honk-btn" type="submit">Honk</button>
+        </div>
+      </form>
+      
+      <div id="console-testing">
+        <button id="log">Console Log</button>
+        <button id="error">Console Error</button>
+        <button id="table">Console Table</button>
+        <button id="dir">Console Dir</button>
+        <button id="dirxml">Console Dirxml</button>
+        <button id="group">Start Console Group</button>
+        <button id="group-end">End Console Group</button>
+        <button id="time">Start Timer</button>
+        <button id="time-end">End Timer</button>
+        <button id="trace">Console Trace</button>
+        <button id="global-error">Trigger Global Error</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/scripts/main.js"></script>
+</body>
+
+</html>
